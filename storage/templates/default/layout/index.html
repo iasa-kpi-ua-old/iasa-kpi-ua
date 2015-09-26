@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>{{meta.title}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{metaTitle|default('title')}}</title>
+    <meta name="description" content="{{metaDescription|default('description')}}">
+    <meta name="abstract" content="{{metaAbstract|default('abstract')}}">
+    <meta name="keywords" content="{{metaKeywords|default('keywords')}}">
+    <link rel="shortcut icon" href="/templates/default/favicon.ico" type="image/vnd.microsoft.icon">
+    <link type="text/css" rel="stylesheet" href="/templates/default/style/style.css" media="all">
+    <script src="/templates/default/script/script.js"></script>
 </head>
 
 <body>
-    {% block body -%}body index.html{%- endblock %}
+    <div id="bodyPage">
+        <div id="bodyHeader">
+            {% block bodyHeader -%}
+            header
+            {%- endblock %}
+        </div>
+        <div id="bodyMiddle">
+            {% block bodyMiddle -%}
+            middle
+            {%- endblock %}
+        </div>
+        <div id="bodyFooter">
+            {% block bodyFooter -%}
+            footer
+            {%- endblock %}
+        </div>
+    </div>
+    {% include "./templates/default/layout/navigation.html" ignore missing -%}
 </body>
+
 </html>
