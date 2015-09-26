@@ -6,23 +6,14 @@ var srv = HTTP.createServer();
 
 srv.on('request', function (req, res){
     var u = URL.parse(req.url);
-    if (u.pathname=='/'){
+    if (u.pathname == '/'){
         res.writeHead(200, {'content-type': 'text/html'});
-        res.write('Hello<br>');
-        res.end('xxx');
+        res.end('Frontend');
     }
-/*
-    else if (u.pathname=='/i'){
-        FS.readFile('./storage/x.jpg', function(err, f){
-            if (err) throw err;
-            res.writeHead(200, {'content-type': 'image/jpg'});
-            res.end(f);
-        });
-    }
-*/
+
     else {
         res.writeHead(200, {'content-type': 'text/html'});
-        res.end('yyy');
+        res.end('others');
     }
 });
 
