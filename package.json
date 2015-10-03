@@ -9,6 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^1.4.2",
+    "cookie": "^0.2.2",
     "fs": "0.0.2",
     "http": "0.0.0",
     "multiparty": "^4.1.2",

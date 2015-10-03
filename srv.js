@@ -1,9 +1,17 @@
 var HTTP = require('http');
 var URL = require('url');
+var listOfReplayes = require('listOfReplayes');
 
-var srv = HTTP.createServer();
+var httpServer = HTTP.createServer(function (request, response){
+    httpManager.do(request, response);
+});
+httpServer.listen(3000);
 
-srv.listen(3000);
+var httpManager = function(){
+    //var middles = new listOfMiddles();
+    var replays = new listOfReplayes();
+};
+
 
 function my () {
     var s = srv;
@@ -27,7 +35,7 @@ function my () {
         //
         cfg.push(o);
     };
-    this.getCall = function (u) {
+    this.getCall = function (url) {
         
     }
 };
@@ -42,7 +50,7 @@ srv.on('request', function (req, res){
     return;
     var u = URL.parse(req.url);
     var cb = mysrv.getCall(u);
-    u.call(srv, req, res);
+    if (cb) cb(req, res);
 });
 /**/
 
