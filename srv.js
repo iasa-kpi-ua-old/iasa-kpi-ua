@@ -5,9 +5,11 @@ var srv = HTTP.createServer();
 
 srv.listen(3000);
 
-function mySrv () {
+function my () {
     var s = srv;
-    var cfg = [];
+    var itemMiddle = [];
+
+    var itemReply = [];
     this.setCall = function (method, host, path, callBack) {
         if (typeof callBack!='function' || callBack instanceof Function) return false;
         var o = { cd: callBack };
@@ -30,12 +32,18 @@ function mySrv () {
     }
 };
 
-var mysrv = new mySrv();
+var x = 1;
 
+var my1 = new my();
+/**/
 srv.on('request', function (req, res){
+    res.setHeader('conten-type', 'text/plain');
+    res.end('Hello world!');
+    return;
     var u = URL.parse(req.url);
     var cb = mysrv.getCall(u);
     u.call(srv, req, res);
 });
+/**/
 
-module.exports = mysrv;
+module.exports = my1;

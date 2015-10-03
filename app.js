@@ -1,5 +1,6 @@
-var URL = require('url');
-var FS = require('fs');
+//var URL = require('url');
+//var FS = require('fs');
+//var UTIL = require('util');
 
 var srv = require('srv');
 var tpl = require('tpl');
