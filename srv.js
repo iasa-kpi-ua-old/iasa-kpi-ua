@@ -12,13 +12,16 @@ var httpManager = function(){
     var replays = new listOfReplayes();
 };
 
+function options2middle (options, name){
+    if (!(options instanceof Object)) throw name;
+};
 
 function my () {
     var s = srv;
     var itemMiddle = [];
 
     var itemReply = [];
-    this.setCall = function (method, host, path, callBack) {
+    this.setCall = function (options, callBack) {
         if (typeof callBack!='function' || callBack instanceof Function) return false;
         var o = { cd: callBack };
         // method
