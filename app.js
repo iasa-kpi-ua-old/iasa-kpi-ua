@@ -2,8 +2,9 @@
 //var FS = require('fs');
 //var UTIL = require('util');
 
-var srv = require('srv');
-var tpl = require('tpl');
+var srv = require('./lib/zcms');
+srv.setup(3001);
+var tpl = require('./lib/tpl');
 
 srv.setCall('GET', /.*/, '/', function (req, res){
     res.writeHead(200, {'content-type': 'text/html'});
