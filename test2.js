@@ -16,7 +16,7 @@ async.waterfall(
         }
     ],
     function (err, a){
-        if (err) console.log('Error');
+        if (err) console.log('Error', err);
         else console.log("9: %s", a);
     }
 );
