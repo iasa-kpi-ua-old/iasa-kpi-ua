@@ -1,3 +1,4 @@
+// promise
 
 var y;
 var x = new Promise(function(resolve, reject){
