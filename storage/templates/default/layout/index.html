@@ -1,36 +1,43 @@
-<!DOCTYPE html>
-<html>
 
+{%- if !html-path %}
+{% set html-path='/templates/default' %}
+{% endif -%}
+{% set tpl-path='./templates/default' %}
+{% set body-top-menu-path='{{tpl-path}}/layout/navigation.html' %}
+
+<!DOCTYPE html >
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{{metaTitle|default('title')}}</title>
-    <meta name="description" content="{{metaDescription|default('description')}}">
-    <meta name="abstract" content="{{metaAbstract|default('abstract')}}">
-    <meta name="keywords" content="{{metaKeywords|default('keywords')}}">
-    <link rel="shortcut icon" href="/templates/default/favicon.ico" type="image/vnd.microsoft.icon">
-    <link type="text/css" rel="stylesheet" href="/templates/default/style/style.css" media="all">
-    <script src="/templates/default/script/script.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+<title>{{ html-title|default('iasa.kpi.ua') }}</title>
+<meta name="description" content="{{ html-description|default('iasa.kpi.ua') }}" >
+<meta name="abstract" content="{{ html-abstract|default('iasa.kpi.ua') }}" >
+<meta name="keywords" content="{{ html-keywords|default('iasa.kpi.ua') }}" >
+
+<link type="image/vnd.microsoft.icon" rel="shortcut icon" href="{{ html-path|default('.') }}/favicon.ico" >
+<link type="text/css" rel="stylesheet" href="{{ html-path|default('.') }}/style/style.css" media="all" >
+<script type="text/javascript" src="{{ html-pathv|default('.') }}/script/script.js"></script>
 </head>
 
 <body>
-    <div id="bodyPage">
-        <div id="bodyHeader">
-            {% block bodyHeader -%}
-            header
-            {%- endblock %}
-        </div>
-        <div id="bodyMiddle">
-            {% block bodyMiddle -%}
-            middle
-            {%- endblock %}
-        </div>
-        <div id="bodyFooter">
-            {% block bodyFooter -%}
-            footer
-            {%- endblock %}
-        </div>
+<div id="body-page">
+    <div id="body-header">
+        {% block body-header -%}
+        {{ body-header|default('header') )}}
+        {%- endblock %}
     </div>
-    {% include "./templates/default/layout/navigation.html" ignore missing -%}
+    <div id="body-middle">
+        {% block body-middle -%}
+        {{ body-middle|default('middle') )}}
+        {%- endblock %}
+    </div>
+    <div id="body-footer">
+        {% block body-footer -%}
+        {{ body-footer|default('footer') )}}
+        {%- endblock %}
+    </div>
+</div>
+{% include "./templates/default/layout/navigation.html" ignore missing %}
 </body>
-
 </html>
