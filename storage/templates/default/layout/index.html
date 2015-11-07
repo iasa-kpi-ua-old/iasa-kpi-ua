@@ -1,10 +1,4 @@
 
-{%- if !html-path %}
-{% set html-path='/templates/default' %}
-{% endif -%}
-{% set tpl-path='./templates/default' %}
-{% set body-top-menu-path='{{tpl-path}}/layout/navigation.html' %}
-
 <!DOCTYPE html >
 <html>
 <head>
@@ -23,18 +17,18 @@
 <body>
 <div id="body-page">
     <div id="body-header">
-        {% block body-header -%}
-        {{ body-header|default('header') )}}
+        {% block body_header -%}
+        {{ body-header|default('header') }}
         {%- endblock %}
     </div>
     <div id="body-middle">
-        {% block body-middle -%}
-        {{ body-middle|default('middle') )}}
+        {% block body_middle -%}
+        {{ body-middle|default('middle') }}
         {%- endblock %}
     </div>
     <div id="body-footer">
-        {% block body-footer -%}
-        {{ body-footer|default('footer') )}}
+        {% block body_footer -%}
+        {{ body-footer|default('footer') }}
         {%- endblock %}
     </div>
 </div>
