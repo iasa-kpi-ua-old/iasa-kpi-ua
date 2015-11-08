@@ -1,0 +1,14 @@
+{
+	"enable": false,
+	"url": "mongodb://localhost:27017/test",
+	"connect":{
+		"db":{
+			"wtimeout": 5
+		},
+		"replset":{},
+		"mongos":{},
+		"server":{
+			"autoReconnect": true
+		}
+	}
+}

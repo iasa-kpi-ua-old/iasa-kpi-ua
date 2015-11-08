@@ -1,0 +1,9 @@
+[
+	{
+		"type": "redirect",
+		"code": 301,
+		"match": "string",
+		"pattern": "^[\\/]index[\\.](?:html|php|asp)$",
+		"replacement": "/"
+	}
+]
