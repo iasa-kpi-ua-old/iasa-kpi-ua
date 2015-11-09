@@ -14,7 +14,7 @@
 	{% if !news.meta %}
 	{% set news.meta = {} %}
 	{% endif %}
-	{% set news.meta.z = 'abc' %}
+	{#% set news.meta.z = 'abc' %#}
 
 	{{ news.meta.z|default('zzz1') }}
 
