@@ -1,0 +1,6 @@
+{
+	"redirects":[
+		{ "code": 301, "replace": "/", "matched": "/index" },
+		{ "code": 301, "replace": "/", "pattern": "^[\\/]index[\\.](?:html|php|asp)$" }
+	]
+}
