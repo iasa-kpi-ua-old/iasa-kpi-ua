@@ -43,7 +43,7 @@
     display:inline-block;
     float:left;
 }
-#rights{
+#content{
     background-color: #dddddd;
     display:inline-block;
     float:left;
@@ -54,7 +54,7 @@
     height:300px;
 }
 #rights table th {
-background-color: #f4f4f4;
+background-color: red;
     margin:5px;
     padding: 5px;
 }
@@ -64,4 +64,7 @@ background-color: #f4f4f4;
 }
 #test{
     background-color: #770000;
+}
+.highlight{
+   background: red;
 }
