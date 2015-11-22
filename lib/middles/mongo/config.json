@@ -1,6 +1,6 @@
 {
-	"enable": false,
-	"url": "mongodb://localhost:27017/test",
+	"enable": true,
+	"url": "mongodb://localhost:27017/iasa",
 	"connect":{
 		"db":{
 			"wtimeout": 5
