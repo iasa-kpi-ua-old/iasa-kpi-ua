@@ -1,5 +1,5 @@
 {
-	"enable": false,
+	"enable": true,
 	"url": "mongodb://localhost:27017/test",
 	"connect":{
 		"db":{

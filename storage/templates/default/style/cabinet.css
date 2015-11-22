@@ -13,6 +13,7 @@
     text-decoration: none;
     color: black;
 }
+
 #imp {
     display: inline-block;
     margin: 10px;
@@ -53,18 +54,15 @@
     width:500px;
     height:300px;
 }
-#rights table th {
-background-color: red;
-    margin:5px;
-    padding: 5px;
+#photo{
+    background-color: white;
+    width: 100px;
+    height: 150px;
+    float:right;
+    margin: 5px;
+    text-align: center;
+
 }
-#rights table td {
-    margin:5px;
-    padding: 5px;
-}
-#test{
-    background-color: #770000;
-}
-.highlight{
-   background: red;
+#table-profile{
+    padding: 10px;
 }

@@ -18,7 +18,7 @@ var run = function(){
 
 	srv.setup(config.port, config.amountThreads);
 };
-//run();return; // !!!
+run();return; // !!!
 
 var domain = require('domain');
 domain.create().on('error', function(error){
