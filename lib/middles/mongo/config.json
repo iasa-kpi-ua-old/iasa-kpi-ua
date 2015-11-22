@@ -1,6 +1,10 @@
 {
 	"enable": true,
+<<<<<<< HEAD
 	"url": "mongodb://localhost:27017/test",
+=======
+	"url": "mongodb://localhost:27017/iasa",
+>>>>>>> origin/master
 	"connect":{
 		"db":{
 			"wtimeout": 5
