@@ -1,4 +1,12 @@
 $(document).ready(function(){
+    $.ajax({
+        url: "/cab/profile.html",
+        cache: false,
+        success: function(html){
+            $("#content").html(html);
+
+        }
+    });
     $('#profile').click(function(){
         $.ajax({
             url: "/cab/profile.html",
