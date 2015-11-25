@@ -12,7 +12,7 @@ setInterval(function(){
 var run = function(){
 	var srv = require('./lib/zcms');
 	var config = require('./config');
-
+	require('array.prototype.find');
 	require('./lib/middles')(srv);
 	require('./lib/replies')(srv);
 
