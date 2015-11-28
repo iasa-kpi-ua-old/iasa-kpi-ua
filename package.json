@@ -22,6 +22,8 @@
     "post-data": "0.0.0",
     "query-string": "^3.0.0",
     "requestify": "^0.1.17",
+    "strong-cluster-control": "^2.2.1",
+    "strong-store-cluster": "^1.0.0",
     "swig": "^1.4.2",
     "url": "^0.11.0",
     "urlencode": "^1.1.0"
