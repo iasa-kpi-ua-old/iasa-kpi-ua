@@ -4,15 +4,18 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="{{ html_path|default('.') }}/style/todo-list.css" media="all" >
-    <script type="application/javascript" src="{{ html_path|default('.') }}/script/todo-list.js" ></script>
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="{{ html_path|default('.') }}/style/todo-list.css" media="all">
+    <script type="application/javascript" src="{{ html_path|default('.') }}/script/todo-list.js"></script>
 </head>
 
 <body>
 <div class="container">
     <h1 class="text-center">Awesome animated ToDo List</h1>
+
     <div class="separator"></div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
@@ -23,19 +26,27 @@
                 </div>
                 <span class="refresh text-muted" title="Refresh your ToDo list"><i class="fa fa-refresh"></i></span>
             </div>
-            <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item</p>
+            <p class="err text-danger text-center hidden"><i class="fa fa-warning"></i> Oops! Please, enter name item
+            </p>
+
             <p class="no-items text-muted text-center hidden"><i class="fa fa-ban"></i></p>
             <ul class="todo-list">
+                {% for item in todo_items.items %}
+                {% if item.completed %}
+                <li class="danger">
+                    {% else %}
                 <li>
+                    {% endif %}
                     <div class="checkbox">
                         <span class="close"><i class="fa fa-times"></i></span>
                         <label>
                             <span class="checkbox-mask"></span>
-                            <input type="checkbox" />
-                            Add new item
+                            <input type="checkbox"/>
+                            {{ item.text }}
                         </label>
                     </div>
                 </li>
+                {% endfor %}
             </ul>
 
         </div>
