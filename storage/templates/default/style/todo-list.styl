@@ -1,0 +1,133 @@
+/* vars */
+grayColor = #e9eaed
+
+myFont(size)
+  font size 'Open Sans', sans-serif
+
+body
+  background grayColor
+  myFont(14px)
+
+.container
+  padding-top 75px
+
+.todo-list
+  margin 20px 0
+
+  li
+    background #fff
+    border-radius 5px
+    margin-bottom 7px
+    position relative
+    list-style none
+
+
+    &.danger
+      background rgba(217, 30, 24,.8)
+      label
+        text-decoration line-through
+        color #fff
+        .checkbox-mask
+          border-color transparent
+          &:after
+            content '\f00c'
+            font-family 'FontAwesome'
+            display block
+            position absolute
+            top -3px
+            left 0
+
+    .checkbox
+      margin 0
+      padding 10px 15px
+      border-radius 5px
+
+
+
+
+    label
+      display block
+      font-weight bold
+
+      input[type="checkbox"]
+        visibility hidden
+
+
+      .checkbox-mask
+        display block
+        border 2px solid #666
+        width 12px
+        height 12px
+        border-radius 2.5px
+        position absolute
+        margin-left -20px
+        margin-top 4px
+
+    .close
+      display none
+      position absolute
+      width 12px
+      height 16px
+      top 50%
+      margin-top -8px
+      right 10px
+      font-size 16px
+      .fa
+        line-height 16px
+
+    &:hover
+      .close
+        display block
+
+.has-feedback
+  .fa
+    line-height 32px
+    cursor pointer
+    pointer-events auto
+    z-index 10
+    display block
+    color #666
+    transition color .15s linear
+    &:hover
+      color #999
+
+.add-control
+  margin-top 20px
+  position relative
+
+  .refresh
+    position absolute
+    top 2.5px
+    left 103%
+    font-size 18px
+    cursor pointer
+    transition all .15s linear
+    &:hover
+      transform rotate(180deg)
+
+.form-control
+.form-control:focus
+.form-control:active
+.form-control:active:focus
+  border none
+  padding 10px 15px
+  outline none
+.form-control
+  box-shadow none
+  transition all .2s linear
+.form-control:focus
+  box-shadow 0 0 15px rgba(0,0,0,.2)
+
+
+.separator
+  margin 15px auto
+  width 50%
+  height 1px
+  border-bottom 1px dashed lightness(grayColor, 70%)
+
+.animated
+  animation-duration .45s
+  animation-fill-mode both
+
+  &.fast
+    animation-duration .25s
