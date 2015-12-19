@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset='utf8'" >
+
+    <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="{{replies_path}}/news/style/blog.css">
+    <title>{{post.title|default('iasa news')}}</title>
+</head>
+
+<body>
+
+
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item active" href="#">Home</a>
+            <a class="blog-nav-item" href="#">New features</a>
+            <a class="blog-nav-item" href="#">Press</a>
+            <a class="blog-nav-item" href="#">New hires</a>
+            <a class="blog-nav-item" href="#">About</a>
+            <a class="blog-nav-item" href="news/add">Add article</a>
+        </nav>
+    </div>
+</div>
+<form method="post">
+<div class="container content">
+    <div class="blog-post">
+        <label for="title">Title: </label>
+        <input id="title" name="title" type="text" class="form-control" value="{{ post.title }}">
+
+        <label for="author">Author: </label>
+        <input id="author" name="author" type="text" class="form-control" value="{{ post.author }}">
+
+        <label for="content">Content</label>
+        <textarea id="content" name="content" class="form-control">{{ post.content }}</textarea>
+
+        <button id="save-post" type="submit" class="btn btn-default">Save article</button>
+        <span id="saved" class="glyphicon glyphicon-ok"></span>
+    </div>
+</div>
+</form>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
