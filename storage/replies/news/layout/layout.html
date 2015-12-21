@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block stylesheets %}
+    <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="{{replies_path}}/news/style/blog.css">
+    {% endblock %}
+    <title>{% block title %}iasa news{% endblock %}</title>
+</head>
+
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item active" href="/news">Home (list articles)</a>
+            <a class="blog-nav-item" href="#">About</a>
+            <a class="blog-nav-item" href="/news/edit/new">Add article</a>
+            {% block navbar-ext %}{% endblock %}
+        </nav>
+    </div>
+</div>
+
+{% block content%}
+Some content
+{% endblock %}
+
+{% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{% endblock %}
+</html>
